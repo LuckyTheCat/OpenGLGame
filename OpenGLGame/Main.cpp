@@ -1,7 +1,10 @@
+#define GLEW_STATIC
+
+#include <GL\glew.h>
 #include <GLFW\glfw3.h>
 #include <Windows.h>
 #include <iostream>
-#include "Cube.h"
+#include "Shapes.h"
 
 int main(void)
 {
@@ -15,11 +18,15 @@ int main(void)
 	glfwMakeContextCurrent(window);
 	float i = 50;
 	Cube c;
+	Triangle t;
 	Position pos1;
 	Position pos2;
 	while (!glfwWindowShouldClose(window))
 	{
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		GLuint VertexArrayID = 10;
+		//glGenVertexArrays(1, &VertexArrayID);
+		//glBindVertexArray(VertexArrayID);
 		frames++;
 		if (time + 1 < glfwGetTime())
 		{
@@ -28,19 +35,23 @@ int main(void)
 			time = glfwGetTime();
 		}
 		//glMatrixMode(GL_PROJECTION);              // setup viewing projection (I don't know)
-		glLoadIdentity();                           // start with identity matrix  (I don't know)
-		glOrtho(-100.0, 100.0, -100.0, 100.0, -200.0, 100.0);   // setup the viewing size of the world
+		//glLoadIdentity();                           // start with identity matrix  (I don't know)
+		//glOrtho(-100.0, 100.0, -100.0, 100.0, -200.0, 100.0);   // setup the viewing size of the world
 		glEnable(GL_DEPTH_TEST);
 		//glMatrixMode(GL_MODELVIEW);
 		float size = 10;
 		//glTranslatef(6, 0, 0);
-		glPushMatrix();
+		//glPushMatrix();
 		pos1.setPos( -size, -size, -size );
 		pos2.setPos(size, size, size );
-		glRotatef(i / 10, 0, 1, 0);
-		glRotatef(-10, 0, 0, 1);
+		//glRotatef(i / 10, 0, 1, 0);
+		//glRotatef(-10, 0, 0, 1);
+		t.draw();
 
-		for (int j = 0; 10 > j; j++)
+		Position p;
+
+		p.pos;
+		for (int j = 0; 10 > j && 0; j++)
 		{
 			pos1.setX(-size + 3*j);
 			pos2.setX(size + 3*j);

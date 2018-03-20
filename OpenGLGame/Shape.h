@@ -1,4 +1,5 @@
 #pragma once
+#include "GL\glew.h"
 #include "GLFW\glfw3.h"
 #include <vector>
 class Shape
@@ -11,4 +12,3 @@ protected:
 	int vCount = 0;
 	GLfloat *verts;
 };
-

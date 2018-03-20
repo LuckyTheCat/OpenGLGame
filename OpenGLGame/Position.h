@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include "Main.cpp"
 class Position
 {
 public:
@@ -26,6 +27,7 @@ public:
 	std::vector<float> getPos();
 
 	float operator[](size_t index);
+	
 
 private:	
 	std::vector<float> pos;
