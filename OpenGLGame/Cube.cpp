@@ -27,13 +27,8 @@ void drawRect(Position pos1, Position pos2, int mode) //mode 0 - vertical(over z
 	glVertex3f(pos1[0], pos1[1], pos1[2]);
 }
 
-const int Cube::giveInt()
-{
-	pos1 = pos2;
-	return 1;
-}
 
-void Cube::draw()
+void Cube::draw(unsigned int &VBO)
 {
 	Position p1 = pos1, p2 = pos2;
 	//glBegin(GL_POLYGON);
@@ -69,7 +64,7 @@ void Cube::draw()
 	drawRect(p1, p2, 0);
 	p2 = pos2;
 	glEnd();
-	Shape::draw();
+	Shape::draw(VBO);
 }
 void Cube::setPosition(Position pos1, Position pos2)
 {

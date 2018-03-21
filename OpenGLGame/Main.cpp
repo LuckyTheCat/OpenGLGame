@@ -5,6 +5,8 @@
 #include <Windows.h>
 #include <iostream>
 #include "Shapes.h"
+#include "Position.h"
+#include "Cube.h"
 
 int main(void)
 {
@@ -46,18 +48,21 @@ int main(void)
 		pos2.setPos(size, size, size );
 		//glRotatef(i / 10, 0, 1, 0);
 		//glRotatef(-10, 0, 0, 1);
-		t.draw();
 
-		Position p;
+		unsigned int VBO;
+		glGenBuffers(1, &VBO);
 
-		p.pos;
-		for (int j = 0; 10 > j && 0; j++)
+		glBindBuffer(GL_ARRAY_BUFFER, VBO);
+
+		t.draw(VBO);
+
+		/*for (int j = 0; 10 > j && 0; j++)
 		{
 			pos1.setX(-size + 3*j);
 			pos2.setX(size + 3*j);
 			c.setPosition(pos1, pos2);
 			c.draw();
-		}
+		}*/
 		if (i++ > 3600) i = 0;
 		glfwSwapBuffers(window); // Tells machine done with frame, waits till it responds. (Swaps back and front buffers)
 		glfwPollEvents(); // Gets events done by system

@@ -6,7 +6,7 @@ Shape::Shape()
 {
 }
 
-void Shape::draw()
+void Shape::draw(unsigned int &VBO)
 {
 	glDrawArrays(GL_TRIANGLES, 0, vCount);
 }

@@ -6,6 +6,6 @@ class Triangle :
 public:
 	Triangle();
 	~Triangle();
-	void draw() override;
+	void draw(unsigned int &VBO) override;
 };
 
