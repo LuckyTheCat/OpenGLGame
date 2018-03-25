@@ -1,11 +1,11 @@
 #pragma once
 #include "Shape.h"
-class Triangle :
+class Rectangle :
 	public Shape
 {
 public:
-	Triangle();
-	~Triangle();
+	Rectangle();
+	~Rectangle();
 	void draw(unsigned int &VBO) override;
 };
 

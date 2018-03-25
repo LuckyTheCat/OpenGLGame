@@ -33,7 +33,7 @@ const int Cube::giveInt()
 	return 1;
 }
 
-void Cube::draw()
+void Cube::draw(unsigned int &VBO)
 {
 	Position p1 = pos1, p2 = pos2;
 	//glBegin(GL_POLYGON);
@@ -69,7 +69,7 @@ void Cube::draw()
 	drawRect(p1, p2, 0);
 	p2 = pos2;
 	glEnd();
-	Shape::draw();
+	Shape::draw(VBO);
 }
 void Cube::setPosition(Position pos1, Position pos2)
 {

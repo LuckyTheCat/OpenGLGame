@@ -7,8 +7,9 @@ class Shape
 public:
 	Shape();
 	~Shape();
-	virtual void draw();
+	virtual void draw(unsigned int &VBO);
 protected:
 	int vCount = 0;
-	GLfloat *verts;
+	float* verts;
+	unsigned int* indicies;
 };

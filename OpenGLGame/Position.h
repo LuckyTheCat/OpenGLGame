@@ -1,6 +1,5 @@
 #pragma once
 #include <vector>
-#include "Main.cpp"
 class Position
 {
 public:

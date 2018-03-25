@@ -6,7 +6,7 @@ class Cube :
 {
 public:
 	Cube();
-	void draw() override;
+	void draw(unsigned int &VBO) override;
 	void setPosition(Position pos1, Position pos2);
 	~Cube();
 	const int giveInt();
